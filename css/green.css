@@ -1,0 +1,16 @@
+body {
+	background: url("../img/hojas.jpg");
+	background-attachment: fixed;
+}
+
+#logo {
+	background: green;
+}
+
+#menu ul li:hover {
+	background: green;
+}
+
+.calculadora {
+	background: green;
+}

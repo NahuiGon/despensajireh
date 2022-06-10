@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head lang="es">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Proyecto para Despensa Jireh</title>
+		<!-- Estilos CSS -->
+		<link rel="stylesheet" href="css/styles.css">
+		<!-- JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- Slider -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+		<!-- Moment -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/locale/es.js" ></script>
+		<!-- Mis Scripts -->
+		<script type="text/javascript" src="js/main.js"></script>
+		<!-- Icons -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+	</head>
+	<body>
+		<!-- Selector de Temas -->
+		<div id="selector-theme">
+			<div id="to-red"></div>
+			<div id="to-blue"></div>
+		</div>
+		
+
+		 <!-- Reponsive celular -->
+		 <nav id="navbar">
+
+		 	<div id="nav-menu-header">
+
+			 	<div id="menu-btn">
+			 		<div class="btn-hamburger"></div>
+			 		<div class="btn-hamburger"></div>
+			 		<div class="btn-hamburger"></div>
+			 	</div>
+
+				<div id="title"><span>Despensa Jireh</span></div>
+			 	
+		 	</div>
+
+		 	<ul id="nav-menu">
+		 		<li><a href="index.html">Inicio</a></li>
+		 		<li><a href="adeber.html">A Deber</a></li>
+		 		<li><a href="historial.html">Historial</a></li>
+		 		<li><a href="calculadora.html">Calculadora</a></li>
+		 	</ul>
+
+		 </nav>
+
+		<!-- Normal Menu -->
+		<div id="sidemenu" class="menu-expanded">
+
+			<div id="profile">
+				<div id="title"><span>Despensa Jireh</span></div>
+				<!-- cargar reloj -->
+				<div id="reloj"></div>
+			</div>
+			
+			<div id="menu-items">
+
+				<div class="item">
+					<a href="" target="_blank">
+						<div class="icon"><i class="bi bi-house"></i></div>
+						<div class="title"><span>Inicio</span></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a href="adeber.html" target="_blank">
+						<div class="icon"><i class="bi bi-person"></i></div>
+						<div class="title"><span>A Deber</span></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a href="historial.html" target="_blank">
+						<div class="icon"><i class="bi bi-card-text"></i></div>
+						<div class="title"><span>Historial</span></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a href="calculadora.html" target="_blank">
+						<div class="icon"><i class="bi bi-calculator"></i></div>
+						<div class="title"><span>Calculadora</span></div>
+					</a>
+				</div>
+
+				<a id="downloadAnchorElem" style="display:none"></a>
+	
+			</div>
+
+			<div id="sidefooter">
+				<div id="title-footer">Nahuel González Copyrigth&copy</div>
+			</div>
+		</div>
+
+		<!-- Contenido -->
+		<div id="main-container">
+
+			<div id="caja">
+				<div id="total">
+					<h2>Total: $<input type="number" id="spTotal" value="0"></input></h2>
+				</div>
+			</div>
+
+			<table border="1" id="tabla">
+				<thead>
+					<tr>
+						<th scope="col" class="th">Producto</th>
+						<th scope="col" class="th">Precio</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td scope="row">
+							<input type="text" class="producto">
+						</td>
+						<td>
+							<input type="number" class="precio">
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<input type="text" class="producto">
+						</td>
+						<td>
+							<input type="number" class="precio">
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<input type="text" class="producto">
+						</td>
+						<td>
+							<input type="number" class="precio">
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<input type="text" class="producto">
+						</td>
+						<td>
+							<input type="number" class="precio">
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<input type="text" class="producto">
+						</td>
+						<td>
+							<input type="number" class="precio">
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<input type="text" class="producto">
+						</td>
+						<td>
+							<input type="number" class="precio">
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<input type="text" class="producto">
+						</td>
+						<td>
+							<input type="number" class="precio">
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<input type="text" class="producto">
+						</td>
+						<td>
+							<input type="number" class="precio">
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<input type="text" class="producto">
+						</td>
+						<td>
+							<input type="number" class="precio">
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<input type="text" class="producto">
+						</td>
+						<td>
+							<input type="number" class="precio">
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<input type="text" class="producto">
+						</td>
+						<td>
+							<input type="number" class="precio">
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<input type="text" class="producto">
+						</td>
+						<td>
+							<input type="number" class="precio">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- Boton Arriba -->
+			<button id="btn-subir" class="grow_ellipse"><i class="bi bi-arrow-up"></i></button>
+
+			<!-- Botones para controlar tabla -->
+			<div id="btns-movil">
+				<div class="item">
+					<a id="agregarFila">
+						<div class="icon"><i class="bi bi-plus-square"></i></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a id="eliminarFila">
+						<div class="icon"><i class="bi bi-dash-square"></i></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a id="mostrarArray">
+						<div class="icon"><i class="bi bi-arrow-right-square"></i></div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a id="guardar">
+						<div class="icon"><i class="bi bi-download"></i></i></div>
+					</a>
+				</div>
+
+				<div id="caja-footer">
+					<div id="total">
+						<h2>Total: $<input type="number" id="spTotal" value="0"></input></h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

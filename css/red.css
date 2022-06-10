@@ -1,0 +1,35 @@
+body {
+	background: #100827;
+	background-attachment: fixed;
+}
+
+#logo {
+	background: #000;
+}
+
+#reloj{
+	background: #000;
+}
+
+#menu {
+	background: #000;
+}
+
+#menu ul li:hover {
+	background: #000;
+	transform: scale(1.1, 1.1);
+	transition: 400ms;
+	border-radius: 0 0 5% 5%;
+	border: 1px solid #000;
+}
+
+.boton{
+	background: #000;
+
+}
+
+.boton:hover{
+	background: #000;
+	transform: scale(1.1, 1.1);
+	transition: 400ms;
+}

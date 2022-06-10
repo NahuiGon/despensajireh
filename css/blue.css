@@ -1,0 +1,30 @@
+#logo {
+	background: #800080;
+}
+
+#reloj{
+	background: #800080;
+}
+
+#menu {
+	background: #000;
+}
+
+#menu ul li:hover {
+	background: #800080;
+	transform: scale(1.1, 1.1);
+	transition: 400ms;
+	border-radius: 0 0 5% 5%;
+	border: 1px solid #800080;
+}
+
+.boton{
+	background: #000;
+
+}
+
+.boton:hover{
+	background: #800080;
+	transform: scale(1.1, 1.1);
+	transition: 400ms;
+}
