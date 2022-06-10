@@ -385,6 +385,10 @@ body{
 		display: none;
 	}
 
+	#caja-footer{
+		display: block;
+	}
+
 	#navbar{
 		background: var(--primary-color);
 		width: 100%;
