@@ -1,10 +1,61 @@
 :root{
-	--primary-color: rgb(53, 53, 53);
+	--primary-color: #262626;
 	--width: 45%;
 	--padding: 10px;
 	--bgcolor: #000080;
 	--hovercolor: rgb(23, 23, 23);
 	--width-collapsed:  50px;
+	--bs-blue: #0d6efd;
+	--bs-indigo: #6610f2;
+	--bs-purple: #6f42c1;
+	--bs-pink: #d63384;
+	--bs-red: #dc3545;
+	--bs-orange: #fd7e14;
+	--bs-yellow: #ffc107;
+	--bs-green: #198754;
+	--bs-teal: #20c997;
+	--bs-cyan: #0dcaf0;
+	--bs-black: #000;
+	--bs-white: #fff;
+	--bs-gray: #6c757d;
+	--bs-gray-dark: #343a40;
+	--bs-gray-100: #f8f9fa;
+	--bs-gray-200: #e9ecef;
+	--bs-gray-300: #dee2e6;
+	--bs-gray-400: #ced4da;
+	--bs-gray-500: #adb5bd;
+	--bs-gray-600: #6c757d;
+	--bs-gray-700: #495057;
+	--bs-gray-800: #343a40;
+	--bs-gray-900: #212529;
+	--bs-primary: #0d6efd;
+	--bs-secondary: #6c757d;
+	--bs-success: #198754;
+	--bs-info: #0dcaf0;
+	--bs-warning: #ffc107;
+	--bs-danger: #dc3545;
+	--bs-light: #f8f9fa;
+	--bs-dark: #212529;
+	--bs-primary-rgb: 13, 110, 253;
+	--bs-secondary-rgb: 108, 117, 125;
+	--bs-success-rgb: 25, 135, 84;
+	--bs-info-rgb: 13, 202, 240;
+	--bs-warning-rgb: 255, 193, 7;
+	--bs-danger-rgb: 220, 53, 69;
+	--bs-light-rgb: 248, 249, 250;
+	--bs-dark-rgb: 33, 37, 41;
+	--bs-white-rgb: 255, 255, 255;
+	--bs-black-rgb: 0, 0, 0;
+	--bs-body-color-rgb: 33, 37, 41;
+	--bs-body-bg-rgb: 255, 255, 255;
+	--bs-body-color: #212529;
+	--bs-body-bg: #fff;
+	--bs-border-color: #dee2e6;
+	--bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+	--bs-link-color: #0d6efd;
+	--bs-link-hover-color: #0a58ca;
+	--bs-code-color: #d63384;
+	--bs-highlight-bg: #fff3cd;
 }
 
 /*
@@ -33,7 +84,6 @@ body{
 */
 
 #sidemenu{
-	transition: all 500ms;
 	background-color: var(--primary-color);
 	color: white;
 	position: fixed;
@@ -41,13 +91,13 @@ body{
 	left: 0;
 	top: 0;
 	text-transform: uppercase;
+	flex-direction: column;
 }
 
 #sidemenu a{
 	color: white;
 	text-decoration: none;
 	transition: all 700ms;
-	text-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 /*
@@ -55,16 +105,15 @@ body{
 */
 
 #sidemenu #profile{
-	border-bottom: solid 1px var(--hovercolor);
 	padding: var(--padding) 0;
 	text-align: center;
+	border-bottom: 1px solid white;
 }
 
 #sidemenu #profile #title{
 	font-size: 3rem;
 	padding: var(--padding) 0;
 	overflow: hidden;
-	text-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 /*
@@ -98,17 +147,18 @@ body{
 
 #sidemenu #menu-items .item a{
 	display: block;
-	border-bottom: 1px solid black;
-	border-top: 1px solid black;
+	border-bottom: 1px solid white;
+	border-top: 1px solid white;
 	margin: 18px;
 	margin-left: 0;
 	line-height: 35px;
 	cursor: pointer;
-
 }
 
 #sidemenu #menu-items .item a:hover{
 	background-color: var(--hovercolor);
+	border-bottom: 1px solid var(--hovercolor);
+	border-top: 1px solid var(--hovercolor);
 	border-radius: 25px;
 	transform: scale(1.1, 1.1);
 	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
@@ -130,10 +180,13 @@ body{
 }
 
 #sidemenu #sidefooter{
-	border-top: solid 1px var(--hovercolor);
+	border-top: solid 1px white;
 	padding: var(--padding) 0;
 	text-align: center;
-	margin-top: 35px;
+}
+
+#sidemenu .caja-title-footer{
+	height: 340px;
 }
 
 #sidemenu #sidefooter #title-footer{
@@ -141,12 +194,11 @@ body{
 	padding: var(--padding) 0;
 	overflow: hidden;
 	text-transform: none;
-	text-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 .menu-expanded{
 	width: var(--width);
-	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 	max-width: 300px;
 }
 
@@ -161,9 +213,10 @@ body{
 /*
 	RELOJ
 */
-#sidemenu #profile #reloj{
+#sidemenu #reloj{
 	font-size: 18px;
-	text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+	padding: 10px;
+	text-align: center;
 }
 
 /*
@@ -182,7 +235,6 @@ body{
 #main-container #caja{
 	color: white;
 	background-color: var(--primary-color);
-	box-shadow: 0 0 10px rgba(0, 0, 0, .7);
 	padding: 30px;
 	border-radius: 30px 30px 0 0;
 	border-bottom: 1px solid black;
@@ -193,12 +245,10 @@ body{
 	height: 50px;
 	line-height: 50px;
 	font-size: 1.5rem;
-	text-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
-#main-container #caja #total #spTotal{
+#main-container #caja #total .spTotal{
 	max-width: 100px;
-	color: red;
 	font-weight: bold;
 	font-size: 1.6rem;
 	padding: 3px;
@@ -350,11 +400,15 @@ body{
 	transform: scale(1.1, 1.1);
 }
 
-#caja-footer{
+#btns-movil #caja-footer{
 	display: none;
 }
 
-@media (max-width: 480px){
+@media (max-width:480px){
+
+}
+
+@media (max-width: 805px){
 
 	body{
 		margin: 0px;
@@ -483,7 +537,7 @@ body{
 		box-shadow: 0 0 10px rgb(0 0 0 / 70%);
 		height: 100%;
 		margin: 0;
-    	margin-top: 17px;
+    	margin-top: 15px;
 	}
 
 	#btns-movil{
@@ -522,13 +576,11 @@ body{
 		box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 	}
 
-	#btns-movil #caja-footer #total #spTotal{
+	#btns-movil #caja-footer #total .spTotal{
 		max-width: 100px;
-		color: red;
 		font-weight: bold;
 		font-size: 1.6rem;
 		padding: 3px;
 		vertical-align: middle;
 	}
 }
-
