@@ -76,6 +76,7 @@ $(document).ready(function() {
             total += parseInt(arrayInput[i]);
         }
         $('.spTotal').val(total);
+        
     });
 
 
