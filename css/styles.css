@@ -404,7 +404,9 @@ body{
 }
 
 @media (max-width:480px){
-
+	#btns-movil #caja-footer{
+		display: block;
+	}
 }
 
 @media (max-width: 805px){
@@ -570,9 +572,9 @@ body{
 		margin-top: 10px;
 		background-color: var(--primary-color);
 		height: 100%;
-		vertical-align: middle;
 		line-height: 60px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+		display: block;
 	}
 
 	#btns-movil #caja-footer #total .spTotal{

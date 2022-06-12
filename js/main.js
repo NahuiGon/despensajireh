@@ -81,48 +81,46 @@ $(document).ready(function() {
 
 
     $("#guardar").click(function guardar() {
+        var arrayProducto = new Array();
+        var inputsValues = document.getElementsByClassName('producto'),
+        namesValues = [].map.call(inputsValues, function(dataInput) {
+            arrayProducto.push(dataInput.value);
+        });
+
         var arrayPrecio = new Array();
         var inputsValues = document.getElementsByClassName('precio'),
             namesValues = [].map.call(inputsValues, function(dataInput) {
                 arrayPrecio.push(dataInput.value);
             });
 
-        var arrayProducto = new Array();
-        var inputsValues = document.getElementsByClassName('producto'),
-            namesValues = [].map.call(inputsValues, function(dataInput) {
-                arrayProducto.push(dataInput.value);
-            });
+        var Productos = [];
 
-        for (var i = 0; i < arrayPrecio.length; i++) {
+        for (let i = 0; i < arrayPrecio.length; i++) {
             var valName = arrayProducto[i];
             var valPrecio = arrayPrecio[i];
-            arr = [];
-
-            arr.push(valName);
-            arr.push(valPrecio);
-
-            Producto = arr.toString();
-
-            json = JSON.stringify({
-                                    Producto
-                                 });
-
-            datos = JSON.parse(json);
-            console.log(datos);
-            let myDataJson = localStorage.setItem("Datos de Productos"+[i], json);
-
-            function download() {
-                var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(json);
-                var dlAnchorElem = document.getElementById('downloadAnchorElem');
-                dlAnchorElem.setAttribute("href", dataStr);
-                dlAnchorElem.setAttribute("download", 'Productos_'+[now]+'.json');
-                dlAnchorElem.click();
-                }
-            // Start file download.
-            download(json);
+            var arr = {
+                        Id: parseInt([i]),
+                        Producto: valName,
+                        Precio: valPrecio,
+                        Fecha: now
+                       }
+            
+            Productos.push(arr);
         }
-    });
 
-    
+        json = JSON.stringify(Productos);
+
+        function download() {
+            var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(json);
+            var dlAnchorElem = document.getElementById('downloadAnchorElem');
+            dlAnchorElem.setAttribute("href", dataStr);
+            dlAnchorElem.setAttribute("download", 'Productos_del dia_'+[now]+'.json');
+            dlAnchorElem.click();
+        }
+
+        download(json);
+
+        myTable.innerHTML = json;
+    });
 
 });
