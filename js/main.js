@@ -8,6 +8,13 @@ $(document).ready(function() {
         navMenu.toggle('normal');
     });
 
+    // footer efecto
+    var btnFooter = $('#btnFooter');
+    var btnsTabla = $('#btns-tabla');
+    btnFooter.click(function() {
+        btnsTabla.fadeToggle('normal');
+    });
+
     // Selector de tema
     var theme = $("#theme");
     $("#to-red").click(function() {
@@ -18,7 +25,8 @@ $(document).ready(function() {
     });
 
     // Scroll arriba de la web
-    $("#btn-subir").click(function(e) {
+    var btnSubir = $("#btn-subir");
+    btnSubir.click(function(e) {
         if (scrollTop = 0) {
             $("#btn-subir").toggle('normal');
         }
