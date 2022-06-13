@@ -402,10 +402,14 @@ body{
 
 @media (max-width: 805px){
 
+	html {
+		min-height: 100%;
+		position: relative;
+	}
+
 	body{
 		margin: 0px;
 		padding: 0px;
-		
 	}
 
 	a{
@@ -446,20 +450,10 @@ body{
 
 	#navbar #nav-menu-header{
 		width: 100%;
-		margin: 0;
+		margin: auto;
 		border-bottom: 1px solid black;
 		padding: 10px;
-		padding-left: 0;
 		height: 50px;
-	}
-
-	#navbar #nav-menu-header #title{
-		width: 85%;
-		text-align: center;
-		font-size: 2.5em;
-		float: right;
-		line-height: 40px;
-		color: white;
 	}
 
 	#navbar #nav-menu-header #menu-btn{
@@ -489,6 +483,16 @@ body{
 		list-style: none;
 		width: 100%;
 		display: none;
+	}
+
+	#navbar #nav-menu #title{
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		border-bottom: 1px solid black;
+		font-size: 2.5em;
+		color: white;
+		line-height: 80px;
 	}
 
 	#navbar #nav-menu li a{
@@ -558,41 +562,41 @@ body{
 		transform: scale(1.1, 1.1);
 	}
 
-	#caja-footer{
+	#footer{
 		background: var(--primary-color);
-		width: 100%;
-		position: fixed;
+		position: absolute;
 		bottom: 0;
-		z-index: 1000;
-		color: white;
-	}
-
-	#caja-footer #contenedor-footer{
 		width: 100%;
-		margin: 0;
-		border-bottom: 1px solid black;
-		padding: 10px;
-		height: 50px;
+		color: white;
+
 	}
 
-	#caja-footer #total{
+	#footer #contenedor-footer{
+		width: 80%;
+		height: 50px;
+		margin: auto;
+		padding: 10px;
+		line-height: 52px;
+	}
+
+	#footer #total{
 		width: 80%;
 		text-align: center;
 		font-size: 1.3em;
 		float: right;
 	}
 
-	#caja-footer #contenedor-footer .icon{
+	#footer #contenedor-footer .icon{
 		float: left;
 		font-size: 2.5em;
 		background-color: var(--primary-color);
 	}
 	
-	#caja-footer #contenedor-footer i{
+	#footer #contenedor-footer i{
 		cursor: pointer;
 	}
 
-	#caja-footer #total .spTotal{
+	#footer #total .spTotal{
 		max-width: 100px;
 		font-weight: bold;
 		font-size: 1.6rem;

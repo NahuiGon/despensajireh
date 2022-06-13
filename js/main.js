@@ -9,9 +9,20 @@ $(document).ready(function() {
     });
 
     // footer efecto
-    var btnFooter = $('#btnFooter');
+    var btnFooterUp = $('.bi-arrow-up-square');
+    var btnFooterDown = $('.bi-arrow-down-square');
     var btnsTabla = $('#btns-tabla');
-    btnFooter.click(function() {
+
+    if(btnFooterUp){
+        btnFooterUp.click(function() {
+            btnsTabla.fadeToggle('normal');
+            
+        });
+    }
+
+    
+
+    btnFooterDown.click(function() {
         btnsTabla.fadeToggle('normal');
     });
 
