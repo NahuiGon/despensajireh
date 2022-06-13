@@ -9,23 +9,20 @@ $(document).ready(function() {
     });
 
     // footer efecto
-    var btnFooterUp = $('.bi-arrow-up-square');
-    var btnFooterDown = $('.bi-arrow-down-square');
+    var btnFooter = $('.iconFooter');
     var btnsTabla = $('#btns-tabla');
 
-    if(btnFooterUp){
-        btnFooterUp.click(function() {
-            btnsTabla.fadeToggle('normal');
-            
-        });
-    }
-
-    
-
-    btnFooterDown.click(function() {
+    btnFooter.click(function() {
         btnsTabla.fadeToggle('normal');
+        if(btnFooter.hasClass("bi-arrow-down-square")){
+            btnFooter.removeClass("bi-arrow-down-square");
+            btnFooter.addClass("bi-arrow-up-square");
+        }else{
+            btnFooter.addClass("bi-arrow-down-square");
+            btnFooter.removeClass("bi-arrow-up-square");
+        }
     });
-
+    
     // Selector de tema
     var theme = $("#theme");
     $("#to-red").click(function() {
